@@ -102,7 +102,10 @@
 <!-- Browserify (ES2015 transpiled to commonJs )-->
 <!--run ./node_modules/.bin/babel js --presets es2015 --out-dir build-->
 <!--./node_modules/.bin/browserify build/es2015/es_app.js --outfile build/bundle.js-->
-<script src="./build/bundle.js" type="text/javascript"></script>
+<!-- does not work with ES2015/AMD without babelify -->
+<!--<script src="./build/bundle.js" type="text/javascript"></script>-->
+
+
 
 </body>
 </html>
