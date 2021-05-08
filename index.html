@@ -44,6 +44,10 @@
             <br/>
             <button class="btn btn-primary" id="amdStartGame">AMD Start Game</button>
             <button class="btn btn-success" id="amdCalculate" disabled>AMD Calculate Score</button>
+            <br/>
+            <button class="btn btn-primary" id="commonStartGame">CommonJs Start Game</button>
+            <button class="btn btn-success" id="commonCalculate" disabled>CommonJs Calculate Score</button>
+
         </div>
     </div>
 </div>
@@ -63,8 +67,19 @@
 <!--<script src="js/iife/scoreboard.js" type="text/javascript"></script>-->
 <!--<script src="js/iife/app.js" type="text/javascript"></script>-->
 
-<!-- amd/requieJs approach -->
-<script data-main="js/amd/amd_app" src="node_modules/requirejs/require.js"></script>
+<!-- amd/requireJs approach -->
+<!--<script data-main="js/amd/amd_app" src="node_modules/requirejs/require.js"></script>-->
+
+<!-- commonJs/systemJs approach -->
+<script src="node_modules/systemjs/dist/system.js"></script>
+<script>
+    System.config({
+        meta: {
+            format: 'cjs'
+        }
+    })
+    System.import('js/commonjs/com_app.js')
+</script>
 
 </body>
 </html>
