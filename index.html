@@ -47,6 +47,9 @@
             <br/>
             <button class="btn btn-primary" id="commonStartGame">CommonJs Start Game</button>
             <button class="btn btn-success" id="commonCalculate" disabled>CommonJs Calculate Score</button>
+            <br/>
+            <button class="btn btn-primary" id="esStartGame">ES2015 Start Game</button>
+            <button class="btn btn-success" id="esCalculate" disabled>ES2015 Calculate Score</button>
 
         </div>
     </div>
@@ -71,15 +74,18 @@
 <!--<script data-main="js/amd/amd_app" src="node_modules/requirejs/require.js"></script>-->
 
 <!-- commonJs/systemJs approach -->
-<script src="node_modules/systemjs/dist/system.js"></script>
-<script>
-    System.config({
-        meta: {
-            format: 'cjs'
-        }
-    })
-    System.import('js/commonjs/com_app.js')
-</script>
+<!--<script src="node_modules/systemjs/dist/system.js"></script>-->
+<!--<script>-->
+<!--    System.config({-->
+<!--        meta: {-->
+<!--            format: 'cjs'-->
+<!--        }-->
+<!--    })-->
+<!--    System.import('js/commonjs/com_app.js')-->
+<!--</script>-->
+
+<!-- ES2015 supported approach -->
+<script src="js/es2015/es_app.js" type="module"></script>
 
 </body>
 </html>
