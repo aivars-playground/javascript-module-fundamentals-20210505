@@ -85,7 +85,19 @@
 <!--</script>-->
 
 <!-- ES2015 supported approach -->
-<script src="js/es2015/es_app.js" type="module"></script>
+<!--<script src="js/es2015/es_app.js" type="module"></script>-->
+
+<!-- ES2015 transpiled to commonJs -->
+<!--run ./node_modules/.bin/babel js --presets es2015 --out-dir build-->
+<script src="node_modules/systemjs/dist/system.js"></script>
+<script>
+    System.config({
+        meta: {
+            format: 'cjs'
+        }
+    })
+    System.import('build/es2015/es_app.js')
+</script>
 
 </body>
 </html>
